@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kevincvargas/labs-nodelib/issues"
   },
-  "homepage": "https://github.com/kevincvargas/labs-nodelib#readme"
+  "homepage": "https://github.com/kevincvargas/labs-nodelib#readme",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  }
 }
