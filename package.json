@@ -1,6 +1,20 @@
 {
-  "dependencies": {
-    "@types/express": "^4.17.13",
-    "express": "^4.17.3"
-  }
+  "name": "labs-nodelib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevincvargas/labs-nodelib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevincvargas/labs-nodelib/issues"
+  },
+  "homepage": "https://github.com/kevincvargas/labs-nodelib#readme"
 }
