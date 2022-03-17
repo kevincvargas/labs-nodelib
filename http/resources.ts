@@ -56,4 +56,7 @@ const getIdParam = (req: IRequest) => {
   return id
 }
 
-export { routeResource, handleMiddlewares }
+module.exports = {
+  routeResource,
+  handleMiddlewares
+}
