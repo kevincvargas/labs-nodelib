@@ -1,5 +1,6 @@
 import { IRequest } from '.';
 import { Router } from 'express';
+import express from 'express'
 import { IMiddleware } from '.';
 
 interface IRouteResource {
@@ -58,4 +59,6 @@ const httpRouter = Object.assign({}, Router(), {
   handleMiddlewares
 })
 
-export default httpRouter
+const httpServer = express
+
+export { httpRouter, httpServer }
