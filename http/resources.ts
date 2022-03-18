@@ -1,7 +1,7 @@
-import { IRequest } from '.';
+import { IRequest } from './contracts';
 import { Router } from 'express';
 import express from 'express'
-import { IMiddleware } from '.';
+import { IMiddleware } from './contracts';
 
 interface IRouteResource {
   controller: any
