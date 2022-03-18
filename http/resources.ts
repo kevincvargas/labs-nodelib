@@ -13,19 +13,21 @@ interface IHandleMiddleware {
   middlewares: IMiddleware[]
 }
 
-/**
- * Add middleware for route resources
- */
- const handleMiddlewares = ({router, middlewares}: IHandleMiddleware) => {
+const handleMiddlewares = ({router, middlewares}: IHandleMiddleware) => {
   middlewares.map(middleware => {
     router.use(middleware)
   })
 }
 
+const getIdParam = (req: IRequest) => {
+  const { id } = req.params
+  return id
+}
+
 /**
  * Implements the CRUD resources for route
  */
-const routeResource = ({ controller, router, middlewares }: IRouteResource) => {
+const resource = ({ controller, router, middlewares }: IRouteResource) => {
   if (middlewares) {
     handleMiddlewares({ router, middlewares })
   }
@@ -51,12 +53,9 @@ const routeResource = ({ controller, router, middlewares }: IRouteResource) => {
   })
 }
 
-const getIdParam = (req: IRequest) => {
-  const { id } = req.params
-  return id
-}
-
-export {
-  routeResource,
+const httpRouter = Object.assign({}, Router(), {
+  resource,
   handleMiddlewares
-}
+})
+
+export default httpRouter
